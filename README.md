@@ -188,4 +188,4 @@ As you know the cloud is pay-as-you-go, so delete your resources.
 
 ![Cluster Delete](./png/028.png)
 
-7.4  If you wish to cancel you AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/). 
+7.4  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/). 
