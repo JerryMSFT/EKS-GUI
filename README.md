@@ -129,8 +129,8 @@ The cluster alone won’t be enough. You need to have worker nodes so Kubernetes
 
 4.5 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/), set up Kubectl in the AWS CloudShell. AWS CloudShell doesn’t pursiust as Azure’s Cloud Shell does –so you may need to reconnect to your cluster.
 
-    Connect to your cluster e.g. aws eks --region us-west-2 update-kubeconfig --name EKSDemo
-    Download the latest release of Kubernettes
+Connect to your cluster e.g. aws eks --region us-west-2 update-kubeconfig --name EKSDemo
+Download the latest release of Kubernettes
 
 Curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 
