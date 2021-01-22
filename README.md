@@ -165,6 +165,7 @@ Run the following commands to install REDIS and the Guestbook:
 ## **Step 6: View the guestbook**
 
 You can now play with the guestbook that you just created by opening it in a browser (it might take a few moments for the guestbook to come up).
+
 6.1 To view the guestbook, you will need the DNS name of your load balancer. Go to the [EC2 Console ](https://us-west-2.console.aws.amazon.com/ec2/v2) and navigate to Load Balancing -> Load Balancers to get the DNS name. 
     ![EC2 Console](./png/025.png)
 
