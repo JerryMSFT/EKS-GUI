@@ -35,11 +35,11 @@ Set up a new IAM role with EKS permissions.
 
   1.8 Choose **EC2** from the list of **Common use cases** under **Choose a use case,** then choose **Next: Permissions**.
 
-  1.9 In the **Filter policies** box, enter AmazonEKSWorkerNodePolicy. Check the box to the left of **AmazonEKSWorkerNodePolicy**.
+  1.9 In the **Filter policies** box, enter `AmazonEKSWorkerNodePolicy`. Check the box to the left of **AmazonEKSWorkerNodePolicy**.
 
-  1.10 In the **Filter policies** box, enter AmazonEC2ContainerRegistryReadOnly. Check the box to the left of **AmazonEC2ContainerRegistryReadOnly**.
+  1.10 In the **Filter policies** box, enter `AmazonEC2ContainerRegistryReadOnly`. Check the box to the left of **AmazonEC2ContainerRegistryReadOnly**.
 
-  1.11 In the **Filter policies** box, enter AmazonEKS\_CNI\_Policy. Check the box to the left of **AmazonEKS\_CNI\_Policy**.
+  1.11 In the **Filter policies** box, enter `AmazonEKS_CNI_Policy`. Check the box to the left of **AmazonEKS\_CNI\_Policy**.
 
   1.12 Choose **Next: Tags**. (Optional) Add metadata to the role by attaching tags as key–value pairs.
 
@@ -54,7 +54,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.1 Open the [VPC Console](https://us-west-2.console.aws.amazon.com/vpc/), select **Launch VPC wizard** and select VPC with a Single Public Subnet.
     ![VPC Console](./png/004.png)
 
-  2.2 Choose **VPC with Single Subnet**. Name your VPC - EKSDemo, leave defaults for the CIDR and choose us-west-2a as your availability zone. Select **Create VPC**
+  2.2 Choose **VPC with Single Subnet**. Name your VPC - EKSDemo, leave defaults for the CIDR and choose `us-west-2a` as your availability zone. Select **Create VPC**
     ![VPC Wizard](./png/005.png)
 
   2.3 EKS requires two subnets in two different availability zones. In AWS subnets do not span Availability Zones. To add a add a subnet, navigate to **Subnets,** and select **Create Subnet** and place it in the opposite Availability Zone. To do this, click on subnet in the left pane.
@@ -63,7 +63,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.4 In the drop down, select the VPC you created in step 2 and select **Create Subnet.**
     ![Create Subnet](./png/007.png)
 
-  2.5 Name your subnet Public Subnet 2 and place it in the opposite Availability Zone e.g., us-west-2b. Enter 10.0.1.0/24 as your IPv4 CIDR. Select **Create subnet**.
+  2.5 Name your subnet Public Subnet 2 and place it in the opposite Availability Zone e.g., `us-west-2b`. Enter `10.0.1.0/24` as your IPv4 CIDR. Select **Create subnet**.
     ![Public Subnet 2](png/008.png)
 
   2.6 Open the [VPC console](https://console.aws.amazon.com/vpc/),  and select **Subnets**.
@@ -84,7 +84,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.12 Under Inbound rules, select **Add rule**.
     ![Inbound Rules](./png/012.png)
 
-  2.13. Add the following values, Type = Custom TCP, Port range = 3000, Source = Custom 0.0.0.0/0, Description= EKSWebApp 
+  2.13. Add the following values,` Type = Custom TCP, Port range = 3000, Source = Custom 0.0.0.0/0, Description= EKSWebApp `
     ![Port Rules](./png/013.png)
 
   2.14 Scroll down and select **Create security group**.
@@ -97,7 +97,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
 2.2 You will see Cluster Name and Kubernettes version and cluster service role (IAM steps) are prefilled. Feel free to add a tag and/or select **Next**. 
     ![Configure Cluster](./png/015.png)
 
-2.3. Select the VPC you created in step 2. To keep it simple, leave it as public. Leave **Network add-on** settings as default and select **Next.**
+2.3. Select the VPC, Subnet and Security Group you created in step 2. To keep it simple, leave it as public. Leave **Network add-on** settings as default and select **Next.**
     ![Cluster Networking](./png/016.png)
 
 2.4 Leave logging turned off and select **Next**.
@@ -109,12 +109,14 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
 2.6 While cluster builds, take a 15-minute break. Refresh the screen when you come back. Refresh your browser. Notice the cluster is set to Active.
     ![Active Cluster](./png/019.png)
 
-2.7 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/) andconnect to you cluster with the following command aws eks --region us-west-2 update-kubeconfig --name EKSDemo. Be sure to replace region and cluster name if you used different values listed in this tutorial. 
+2.7 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/) and connect to you cluster with the following command 
+`aws eks --region us-west-2 update-kubeconfig --name EKSDemo.`  Be sure to replace region and cluster name if you used different values listed in this tutorial. 
     ![AWS Cloud Shell](./png/020.png)
 
 ## **Step 4: Launching Kubernetes Worker Nodes**
 
 The cluster alone won’t be enough. You need to have worker nodes so Kubernetes can schedule pods. Managed worker nodes will be created meaning that AWS takes care of the provisioning of the EC2 instance(s) in your account.
+
 4.1 Add a Node Group by going to the **Compute** tab and selecting **Add Node Group.** Name your Node Group EKSDemoNode and select the NodeInstanceRole you created in Step 1. Leave the default settings and select **Next**.
      ![Nodes](./png/021.png)
 
@@ -127,16 +129,16 @@ The cluster alone won’t be enough. You need to have worker nodes so Kubernetes
 4.4 In the Review and create view, review and make changes if necessary and select **Create.** The Node Group creation process will take ~15 minutes. When the process is complete, the status will show Active.
     ![Create Node](./png/024.png)
 
-4.5 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/), set up Kubectl in the AWS CloudShell. AWS CloudShell doesn’t pursiust as Azure’s Cloud Shell does –so you may need to reconnect to your cluster.
+4.5 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/), set up Kubectl in the AWS CloudShell. AWS CloudShell doesn’t persist as Azure’s Cloud Shell does –so you may need to reconnect to your cluster.
 
-Connect to your cluster e.g. aws eks --region us-west-2 update-kubeconfig --name EKSDemo
+Connect to your cluster e.g. `aws eks --region us-west-2 update-kubeconfig --name EKSDemo`
 Download the latest release of Kubernettes
 
-Curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+`curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"`
 
-4.6.1 Maake **Kubectl** executable: chmod +x ./kubectl
+4.6.1 Make **Kubectl** executable: `chmod +x ./kubectl`
 
-4.6.2 Move the binary in to your PATH: sudo mv ./kubectl /usr/local/bin/kubectl
+4.6.2 Move the binary in to your PATH: `sudo mv ./kubectl /usr/local/bin/kubectl`
 
 4.6.3 Test to ensure the version you installed is up-to-date: kubectl version –client
 
