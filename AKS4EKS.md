@@ -91,25 +91,25 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
 
 ## **Step 3: Creating the EKS Cluster**
 
-1.1 Open the [EKS console](https://us-west-2.console.aws.amazon.com/eks/), Name your EKS Cluster “EKSDemo” and click on the **Next step**.
+3.1 Open the [EKS console](https://us-west-2.console.aws.amazon.com/eks/), Name your EKS Cluster “EKSDemo” and click on the **Next step**.
     ![EKS Console](./png/014.png)
 
-2.2 You will see Cluster Name and Kubernettes version and cluster service role (IAM steps) are prefilled. Feel free to add a tag and/or select **Next**. 
+3.2 You will see Cluster Name and Kubernettes version and cluster service role (IAM steps) are prefilled. Feel free to add a tag and/or select **Next**. 
     ![Configure Cluster](./png/015.png)
 
-2.3. Select the VPC, Subnet and Security Group you created in step 2. To keep it simple, leave it as public. Leave **Network add-on** settings as default and select **Next.**
+3.3. Select the VPC, Subnet and Security Group you created in step 2. To keep it simple, leave it as public. Leave **Network add-on** settings as default and select **Next.**
     ![Cluster Networking](./png/016.png)
 
-2.4 Leave logging turned off and select **Next**.
+3.4 Leave logging turned off and select **Next**.
     ![Cluster Logging](./png/017.png)
 
-2.5 Review and **Create.**
+3.5 Review and **Create.**
     ![Create Cluster](./png/018.png)
 
-2.6 While cluster builds, take a 15-minute break. Refresh the screen when you come back. Refresh your browser. Notice the cluster is set to Active.
+3.6 While cluster builds, take a 15-minute break. Refresh the screen when you come back. Refresh your browser. Notice the cluster is set to Active.
     ![Active Cluster](./png/019.png)
 
-2.7 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/) and connect to you cluster with the following command 
+3.7 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/) and connect to you cluster with the following command 
 `aws eks --region us-west-2 update-kubeconfig --name EKSDemo.`  Be sure to replace region and cluster name if you used different values listed in this tutorial. 
     ![AWS Cloud Shell](./png/020.png)
 
