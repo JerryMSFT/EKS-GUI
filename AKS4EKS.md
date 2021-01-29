@@ -123,11 +123,11 @@ The cluster alone won’t be enough. You need to have worker nodes so Kubernetes
 4.2 On the Set Compute and Scaling, leave defaults and select **Next**. 
     ![Compute Nodes](./png/022.png)
 
-4.3 On the Specify networking leave as default –we will not need to SSH into the nodes for this tutorial. Uncheck the Allow Access to Remote Nodes. The screen will readjust. Select **Next**
+4.3 On the Specify networking leave as default –we will not need to SSH into the nodes for this tutorial. De-select the Allow Access to Remote Nodes. The screen will readjust. Select **Next**
     ![Node Networking](./png/023.png)
 
-4.4 In the Review and create view, review and make changes if necessary and select **Create.**
-    ![./png/0241.png]
+4.4 In the Review and create view, review and make changes if necessary, scroll down  and select **Create.**
+    ![Review-Create](./png/0241.png)
 
 The Node Group creation process will take ~15 minutes. When the process is complete, the status will show Active.
     ![Create Node](./png/024.png)
