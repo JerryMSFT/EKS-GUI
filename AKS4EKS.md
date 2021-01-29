@@ -199,6 +199,6 @@ As you know the cloud is pay-as-you-go, so delete your resources.
 ![VPC delete](./png/30.png)
 
 7.6. When prompted, type delete and select Delete
-[![VPC Delete Confirm](.png/31.png)
+[![VPC Delete Confirm](./png/31.png)
 
 7.7 If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/).
