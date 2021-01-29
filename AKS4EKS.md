@@ -183,14 +183,12 @@ You can now play with the guestbook that you just created by opening it in a bro
 
 As you know the cloud is pay-as-you-go, so delete your resources.
 
-7.1 While in the AWS Cloud Console, enter the following command kubectl delete -f examples/guestbook-go
-
-7.2 Go the EKS Console and Navigate to compute, select your Node group example EKSDemoNode and select **Delete**.
+7.1 Go the EKS Console and Navigate to compute, select your Node group example EKSDemoNode and select **Delete**.
 
 ![Node Delete](./png/027.png)
 
-7.3 After your Node Groups are deleted, go **Clusters** and select **Delete**. 
+7.2 After your Node Groups are deleted, go **Clusters** and select **Delete**. 
 
 ![Cluster Delete](./png/028.png)
 
-7.4  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/). 
+7.3  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/). 
