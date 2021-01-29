@@ -126,7 +126,10 @@ The cluster alone won’t be enough. You need to have worker nodes so Kubernetes
 4.3 On the Specify networking leave as default –we will not need to SSH into the nodes for this tutorial. Uncheck the Allow Access to Remote Nodes. The screen will readjust. Select **Next**
     ![Node Networking](./png/023.png)
 
-4.4 In the Review and create view, review and make changes if necessary and select **Create.** The Node Group creation process will take ~15 minutes. When the process is complete, the status will show Active.
+4.4 In the Review and create view, review and make changes if necessary and select **Create.**
+    ![./png/0241.png]
+
+The Node Group creation process will take ~15 minutes. When the process is complete, the status will show Active.
     ![Create Node](./png/024.png)
 
 4.5 Open the [AWS Cloud Shell](https://us-west-2.console.aws.amazon.com/cloudshell/), set up Kubectl in the AWS CloudShell. AWS CloudShell doesn’t persist as Azure’s Cloud Shell does –so you may need to reconnect to your cluster.
