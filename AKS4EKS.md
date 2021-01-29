@@ -1,6 +1,6 @@
 # Welcome to the EKS for AKS user's tutorial (GUI edition)
 
-To get the most from this tutorial, you must know how to build an AKS cluster on Azure. In this tutorial you will build an EKS cluster on AWS, deploy worker nodes and install a simple guestbook application. 
+To get the most from this tutorial, you must know how to build an AKS cluster on Azure. In this tutorial you will build an EKS cluster on AWS, deploy worker nodes and install a simple guestbook application. You will be using AWS' 'us-west-2' region to deploy your EKS cluster. 
 
 ## **Step 0: Before You Start**
 
@@ -183,7 +183,7 @@ You can now play with the guestbook that you just created by opening it in a bro
 
 As you know the cloud is pay-as-you-go, so delete your resources.
 
-7.1 Go the EKS Console and Navigate to compute, select your Node group example EKSDemoNode and select **Delete**.
+7.1 Open the [EKS console](https://us-west-2.console.aws.amazon.com/eks/) Navigate to compute, select your Node group example EKSDemoNode and select **Delete**.
 
 ![Node Delete](./png/027.png)
 
@@ -191,4 +191,4 @@ As you know the cloud is pay-as-you-go, so delete your resources.
 
 ![Cluster Delete](./png/028.png)
 
-7.3  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/). 
+7.3  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/).
