@@ -1,6 +1,6 @@
 # Welcome to the EKS for AKS user's tutorial (GUI edition)
 
-To get the most from this tutorial, you must know how to build an AKS cluster on Azure. In this tutorial you will build an EKS cluster on AWS, deploy worker nodes and install a simple guestbook application. You will be using AWS' 'us-west-2' region to deploy your EKS cluster. 
+To get the most from this tutorial, you must know how to build an AKS cluster on Azure. In this tutorial you will build an EKS cluster on AWS, deploy worker nodes and install a simple guestbook application. You will be using AWS' `us-west-2` region to deploy your EKS cluster. 
 
 ## **Step 0: Before You Start**
 
