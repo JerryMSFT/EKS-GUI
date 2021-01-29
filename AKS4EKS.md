@@ -191,4 +191,14 @@ As you know the cloud is pay-as-you-go, so delete your resources.
 
 ![Cluster Delete](./png/028.png)
 
-7.3  If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/).
+7.3 It may take up to 5  minutes for the EKS Cluster to delete. Once deleted you can delete the VPC
+
+7.4 Before you delete the VPC, check to see if the load balancer was deleted, go to the [EC2 Console](https://us-west-2.console.aws.amazon.com/ec2). If it is not deleted, select it, go to actions and select delete. 
+
+7.5. Open the [VPC Console](https://us-west-2.console.aws.amazon.com/vpc/home?region=us-west-2#vpcs:)
+![VPC delete](./png/30.png)
+
+7.6. When prompted, type delete and select Delete
+[![VPC Delete Confirm](.png/31.png)
+
+7.7 If you wish to cancel your AWS account, go [here](https://aws.amazon.com/premiumsupport/knowledge-center/close-aws-account/).
