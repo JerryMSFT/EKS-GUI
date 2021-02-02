@@ -29,7 +29,7 @@ Set up a new IAM role with EKS permissions.
   1.4 Choose **Next: Review**.
     ![Create Role](./png/003.png)
 
-  1.5 For **Role name**, enter a unique name for your role, such as eksClusterRole, then choose **Create role**.
+  1.5 For **Role name**, enter a unique name for your role, such as `eksClusterRole`, then choose **Create role**.
 
   1.6 Next you will create a Node worker role.
 
@@ -47,7 +47,7 @@ Set up a new IAM role with EKS permissions.
 
   1.13 Choose **Next: Review**.
   
-  1.14 For **Role name**, enter a unique name for your role, such as NodeInstanceRole. For **Role description**, replace the current text with descriptive text such as Amazon EKS - Node Group Role, then choose **Create role**.
+  1.14 For **Role name**, enter a unique name for your role, such as `NodeInstanceRole`. For **Role description**, replace the current text with descriptive text such as Amazon EKS - Node Group Role, then choose **Create role**.
 
 ## **Step 2: Creating the VPC for EKS**
 
@@ -56,7 +56,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.1 Open the [VPC Console](https://us-west-2.console.aws.amazon.com/vpc/), select **Launch VPC wizard** and select VPC with a Single Public Subnet.
     ![VPC Console](./png/004.png)
 
-  2.2 Choose **VPC with Single Subnet**. Name your VPC - EKSDemo, leave defaults for the CIDR and choose `us-west-2a` as your availability zone. Select **Create VPC**
+  2.2 Choose **VPC with Single Subnet**. Name your VPC - `EKSDemo`, leave defaults for the CIDR and choose `us-west-2a` as your availability zone. Select **Create VPC**
     ![VPC Wizard](./png/005.png)
 
   2.3 EKS requires two subnets in two different availability zones. In AWS subnets do not span Availability Zones. To add a add a subnet, navigate to **Subnets,** and select **Create Subnet** and place it in the opposite Availability Zone. To do this, click on subnet in the left pane.
@@ -65,7 +65,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.4 In the drop down, select the VPC you created in step 2 and select **Create Subnet.**
     ![Create Subnet](./png/007.png)
 
-  2.5 Name your subnet Public Subnet 2 and place it in the opposite Availability Zone e.g., `us-west-2b`. Enter `10.0.1.0/24` as your IPv4 CIDR. Select **Create subnet**.
+  2.5 Name your subnet `Public Subnet 2` and place it in the opposite Availability Zone e.g., `us-west-2b`. Enter `10.0.1.0/24` as your IPv4 CIDR. Select **Create subnet**.
     ![Public Subnet 2](png/008.png)
 
   2.6 Open the [VPC console](https://console.aws.amazon.com/vpc/),  and select **Subnets**.
@@ -78,7 +78,7 @@ Next, you are going to create a separate VPC for our EKS cluster. To do this, go
   2.9 In the VPC Console, navigate to security groups, select Create security group. 
     ![Create Security group](./png/010.png) 
 
-  2.10 In the Basic details, name your security group EKSDemoSG.
+  2.10 In the Basic details, name your security group `EKSDemoSG`.
 
   2.11. Add a Description and select your VPC (EKSDemo)
     ![Security Group Properties](./png/011.png)
