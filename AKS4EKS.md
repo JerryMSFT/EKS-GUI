@@ -166,7 +166,7 @@ Run the following commands to install REDIS and the Guestbook:
 
 5.5 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-controller.json`
 
-5.6 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json'
+5.6 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json`
 
 
 ## **Step 6: View the guestbook**
