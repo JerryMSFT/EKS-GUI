@@ -156,17 +156,17 @@ The following commands create the different Kubernetes building blocks required 
 While in the in the AWS CloudShell, connect to your cluster aws eks --region us-west-2 update-kubeconfig --name EKSDemo
 Run the following commands to install REDIS and the Guestbook:
 
-5.1 kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-controller.json
+5.1 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-controller.json`
 
-5.2 kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-service.json
+5.2 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-master-service.json`
 
-5.3 kubectl apply -f <https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-controller.json>
+5.3 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-controller.json`
 
-5.4 kubectl apply -f <https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-service.json>
+5.4 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/redis-slave-service.json`
 
-5.5 kubectl apply -f <https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-controller.json>
+5.5 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-controller.json`
 
-5.6 kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json
+5.6 `kubectl apply -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook-go/guestbook-service.json'
 
 
 ## **Step 6: View the guestbook**
