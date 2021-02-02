@@ -2,6 +2,8 @@
 
 To get the most from this tutorial, you must know how to build an AKS cluster on Azure. In this tutorial you will build an EKS cluster on AWS, deploy worker nodes and install a simple guestbook application. You will be using AWS' `us-west-2` region to deploy your EKS cluster. 
 
+This is not a free lab, it will cost you $.10 per hour for the EKS Cluster Noide and ~ $.05 per hour per EC2 worker node. Make sure you terminate all EKS services at the end of this lab. 
+
 ## **Step 0: Before You Start**
 
 You will need to make sure you have the following components installed and set up before you start with Amazon EKS:
